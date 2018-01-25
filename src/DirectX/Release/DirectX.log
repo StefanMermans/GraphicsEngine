@@ -1,0 +1,9 @@
+﻿  DirectXController.cpp
+  stdafx.cpp
+  main.cpp
+  DirectXEngine.cpp
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+  Generating code
+  All 118 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  DirectX.vcxproj -> C:\GoogleDrive\Projects\Personal\GraphicsEngine\Release\DirectX.exe

@@ -1,0 +1,11 @@
+﻿Build started 25-1-2018 15:34:26.
+     1>Project "C:\GoogleDrive\Projects\Personal\GraphicsEngine\Assets\Assets.vcxproj" on node 2 (Clean target(s)).
+     1>_PrepareForClean:
+         Deleting file "Debug\Assets.tlog\Assets.lastbuildstate".
+     1>Done Building Project "C:\GoogleDrive\Projects\Personal\GraphicsEngine\Assets\Assets.vcxproj" (Clean target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.01
