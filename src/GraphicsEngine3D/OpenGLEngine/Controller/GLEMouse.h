@@ -11,6 +11,9 @@ struct GLEMouseButton {
 	bool pressed;
 };
 
+/*
+ * This class represents the state if the mouse.
+*/
 class GLEMouse {
 public:
 	GLEMouse(const size_t &buttonCount = GLE_DEFAULT_MOUSE_BUTTONS);
@@ -24,12 +27,10 @@ public:
 	bool isHeld(const size_t &index);
 	bool isPressed(const size_t &index);
 private:
-	void growVector(const size_t &size);
+	void allocVector(const size_t &size);
 
 	glm::ivec2 _delta;
 	glm::ivec2 _lastPos;
-	// We can't use a bool vector, because
-	// they suck efficiency wise.
 	std::vector<GLEMouseButton> _keys;
 
 	bool _initial;

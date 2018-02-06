@@ -167,12 +167,15 @@
     <ClCompile Include="DirectXEngine\ShaderBuilder.cpp" />
     <ClCompile Include="DirectXEngine\WindowController.cpp" />
     <ClCompile Include="GraphicsEngine3D.cpp" />
+    <ClCompile Include="OpenGLEngine\Controller\GLECamera.cpp" />
     <ClCompile Include="OpenGLEngine\Controller\FileListener.cpp" />
     <ClCompile Include="OpenGLEngine\Controller\GLEMouse.cpp" />
     <ClCompile Include="OpenGLEngine\GLEController.cpp" />
     <ClCompile Include="OpenGLEngine\GLEKey.cpp" />
     <ClCompile Include="OpenGLEngine\GLEModel.cpp" />
     <ClCompile Include="OpenGLEngine\OpenGLEngine.cpp" />
+    <ClCompile Include="OpenGLEngine\Shader\GLEFragmentShader.cpp" />
+    <ClCompile Include="OpenGLEngine\Shader\GLEShader.cpp" />
     <ClCompile Include="OpenGLEngine\Shader\GLEVertexShader.cpp" />
     <ClCompile Include="OpenGLEngine\Shader\GLEShaderProgram.cpp" />
   </ItemGroup>
@@ -191,6 +194,7 @@
     <ClInclude Include="DirectXEngine\DxEventHandler.h" />
     <ClInclude Include="DirectXEngine\ShaderBuilder.h" />
     <ClInclude Include="DirectXEngine\WindowController.h" />
+    <ClInclude Include="OpenGLEngine\Controller\GLECamera.h" />
     <ClInclude Include="OpenGLEngine\Controller\FileListener.h" />
     <ClInclude Include="OpenGLEngine\Controller\GLEMouse.h" />
     <ClInclude Include="OpenGLEngine\GLEKey.h" />
@@ -198,6 +202,8 @@
     <ClInclude Include="OpenGLEngine\GLEstdafx.h" />
     <ClInclude Include="OpenGLEngine\GLEController.h" />
     <ClInclude Include="OpenGLEngine\OpenGLEngine.h" />
+    <ClInclude Include="OpenGLEngine\Shader\GLEFragmentShader.h" />
+    <ClInclude Include="OpenGLEngine\Shader\GLEShader.h" />
     <ClInclude Include="OpenGLEngine\Shader\GLEVertexShader.h" />
     <ClInclude Include="OpenGLEngine\Shader\GLEShaderProgram.h" />
     <ClInclude Include="stdafx.h" />

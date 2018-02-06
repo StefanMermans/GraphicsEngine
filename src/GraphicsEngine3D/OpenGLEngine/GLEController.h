@@ -6,6 +6,7 @@
 #include "../Core/Vertex.h"
 #include "GLEKey.h"
 #include "../OpenGLEngine/Controller/GLEMouse.h"
+#include "../OpenGLEngine/Controller/GLECamera.h"
 
 #define GLE_MOUSE_BUTTON_NONE -1
 #define GLE_KEY_COUNT sizeof(unsigned char) * 255
@@ -31,6 +32,7 @@ public:
 private:
 	GLEKey _keys[GLE_KEY_COUNT];
 	GLEMouse _mouse;
+	GLECamera _camera;
 
 	const std::vector<Core::Vertex> _triangleVertices = {
 		{ { -1, -1,  0 },{ 1, 0, 0, 1 } },

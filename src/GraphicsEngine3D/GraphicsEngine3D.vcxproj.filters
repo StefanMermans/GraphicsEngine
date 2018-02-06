@@ -82,6 +82,15 @@
     <ClCompile Include="OpenGLEngine\Controller\GLEMouse.cpp">
       <Filter>Source Files\OpenGLEngine\Controller</Filter>
     </ClCompile>
+    <ClCompile Include="OpenGLEngine\Shader\GLEFragmentShader.cpp">
+      <Filter>Source Files\OpenGLEngine\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLEngine\Shader\GLEShader.cpp">
+      <Filter>Source Files\OpenGLEngine\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLEngine\Controller\GLECamera.cpp">
+      <Filter>Source Files\OpenGLEngine\Controller</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\AssetLoader.h">
@@ -154,6 +163,15 @@
       <Filter>Source Files\OpenGLEngine\Shader</Filter>
     </ClInclude>
     <ClInclude Include="OpenGLEngine\Controller\GLEMouse.h">
+      <Filter>Source Files\OpenGLEngine\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLEngine\Shader\GLEFragmentShader.h">
+      <Filter>Source Files\OpenGLEngine\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLEngine\Shader\GLEShader.h">
+      <Filter>Source Files\OpenGLEngine\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLEngine\Controller\GLECamera.h">
       <Filter>Source Files\OpenGLEngine\Controller</Filter>
     </ClInclude>
   </ItemGroup>

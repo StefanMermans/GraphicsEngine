@@ -63,6 +63,14 @@ void GLEController::init()
 
 void GLEController::update(float deltaTime)
 {
+	if (_keys['a'].isHeld()) {
+		Logger::logLine("DT: " + std::to_string(deltaTime));
+		_camera.pos.x -= 5 * deltaTime;
+	}
+	if (_keys['d'].isHeld()) {
+		_camera.pos.x += 5 * deltaTime;
+	}
+
 	for (size_t i = 0; i < models.size(); i++) {
 		models[i]->update(deltaTime / 1000.0f);
 	}
@@ -96,7 +104,8 @@ void GLEController::keyUp(unsigned char key, int x, int y)
 void GLEController::render(glm::mat4 view)
 {
 	//vermenigvuldig met een lookat
-	view *= glm::lookAt(glm::vec3(0, 0, 2), glm::vec3(0, 0, 0), glm::vec3(0, 1, 0));
+	//view *= glm::lookAt(glm::vec3(2, 0, 2), glm::vec3(2, 0, 0), glm::vec3(0, 1, 0));
+	view *= _camera.calcLookAt();
 
 	for (size_t i = 0; i < models.size(); i++) {
 		models[i]->render(view);

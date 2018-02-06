@@ -1,9 +1,10 @@
 #version 330
 
-in vec3 color;
-out vec3 fragColor;
+in vec4 color;
+out vec4 fragColor;
 
 void main()
 {
-	fragColor = vec3(0.5, 1, 0.8);
+    vec4 modifier = vec4(1, 1, 40, 1);
+    fragColor = color * modifier;
 }

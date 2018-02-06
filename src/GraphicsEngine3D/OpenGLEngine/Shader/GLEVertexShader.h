@@ -1,31 +1,18 @@
-#ifndef GLE_SHADER_H
-#define GLE_SHADER_H
+#ifndef GLE_VERTEX_SHADER_H
+#define GLE_VERTEX_SHADER_H
 
 #include "../GLEstdafx.h"
 #include <string>
+#include "GLEShader.h"
 
-enum GLEShaderState
-{
-	GLE_SHADER_CREATED,
-	GLE_SHADER_COMPILED,
-	GLE_SHADER_FAILED
-};
-
-class GLEVertexShader {
+class GLEVertexShader : public GLEShader {
 public:
 	GLEVertexShader(const std::string &filePath);
-	virtual ~GLEVertexShader() = 0;
+	GLEVertexShader();
+	virtual ~GLEVertexShader() = default;
 
-	virtual bool init() = 0;
-
-	const GLenum type;
-private:
-	std::string _filePath;
-	std::string _source;
-
-	GLEShaderState _state;
-
-	GLuint _id;
+	bool init() override;
+	bool attach(const GLuint &programId) override;
 };
 
 #endif // !GLE_SHADER_H

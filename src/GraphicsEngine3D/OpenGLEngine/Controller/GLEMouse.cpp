@@ -4,8 +4,7 @@
 GLEMouse::GLEMouse(const size_t &buttonCount) : 
 	_initial(true)
 {
-
-	growVector(buttonCount);
+	allocVector(buttonCount);
 }
 
 void GLEMouse::setPos(const glm::ivec2 &pos)
@@ -26,7 +25,7 @@ void GLEMouse::setPos(const glm::ivec2 &pos)
 bool GLEMouse::isHeld(const size_t &index)
 {
 	// Grow keys vector to fit demand
-	growVector(index);
+	allocVector(index);
 
 	// Make sure the held variable isn't going to be modified.
 	return _keys[index].held == true;
@@ -35,7 +34,7 @@ bool GLEMouse::isHeld(const size_t &index)
 bool GLEMouse::isPressed(const size_t & index)
 {
 	// Grow keys vector to fit demand
-	growVector(index);
+	allocVector(index);
 
 	if (_keys[index].pressed) {
 		_keys[index].pressed = false;
@@ -47,7 +46,7 @@ bool GLEMouse::isPressed(const size_t & index)
 void GLEMouse::setState(const size_t & index, const bool & state)
 {
 	// Grow keys vector to fit demand
-	growVector(index);
+	allocVector(index);
 
 	if (!_keys[index].held && state) {
 		_keys[index].pressed = true;
@@ -67,7 +66,7 @@ const glm::ivec2 GLEMouse::delta() const
 	return _delta;
 }
 
-void GLEMouse::growVector(const size_t & size)
+void GLEMouse::allocVector(const size_t & size)
 {
 	while (size >= _keys.size()) {
 		_keys.push_back({ false, false });

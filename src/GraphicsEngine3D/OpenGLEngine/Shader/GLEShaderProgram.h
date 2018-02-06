@@ -4,12 +4,8 @@
 #include <GL\glew.h>
 #include <glm.hpp>
 #include <iostream>
-
-enum GLEShaderState {
-	CREATED,
-	CREATED_NO_FILES,
-	READY,
-};
+#include "GLEFragmentShader.h"
+#include "GLEVertexShader.h"
 
 class GLEShaderProgram
 {
@@ -21,23 +17,18 @@ public:
 	~GLEShaderProgram();
 
 	bool init();
-	bool init(
-		std::string &vertShaderData,
-		std::string &fragShaderData);
-
+	
 	void use();
 	void setUniform(glm::mat4 viewMatrix);
 
-	static bool checkErrors(GLuint shaderId);
 	inline GLEShaderState state() const { return _state; };
 private:
-	static bool compile(const char* shaderData, const GLuint &programId, const GLuint &shaderType, GLuint &shaderId);
-
-	std::string _vsFilePath;
-	std::string _fsFilePath;
+	GLEVertexShader _vertShader;
+	GLEFragmentShader _fragShader;
 
 	GLuint _programId;
 	GLuint _modelViewUniform;
+	GLuint _multiplier;
 
 	GLEShaderState _state;
 };
