@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\DirectXEngine">
+      <UniqueIdentifier>{bcd5a49f-74d7-4516-95b3-3dbeb216fd10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{46556915-ec2c-4c42-84ac-c5ee5c59516d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGLEngine">
+      <UniqueIdentifier>{dce19903-ff30-4766-b066-5e12c6659b70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGLEngine\Controller">
+      <UniqueIdentifier>{aaa2b5a5-b30f-4759-a4fc-e909c31ae663}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGLEngine\Shader">
+      <UniqueIdentifier>{18288184-57d9-4450-b80d-b0a6170a30ec}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GraphicsEngine3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\AssetLoader.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\BasicAssetLoader.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\ConsoleProvider.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\CoutConsoleProvider.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Logger.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Vertex.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WinConsoleProvider.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXEngine\DirectXController.cpp">
+      <Filter>Source Files\DirectXEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXEngine\DirectXEngine.cpp">
+      <Filter>Source Files\DirectXEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXEngine\ShaderBuilder.cpp">
+      <Filter>Source Files\DirectXEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXEngine\WindowController.cpp">
+      <Filter>Source Files\DirectXEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLEngine\GLEModel.cpp">
+      <Filter>Source Files\OpenGLEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLEngine\OpenGLEngine.cpp">
+      <Filter>Source Files\OpenGLEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLEngine\GLEController.cpp">
+      <Filter>Source Files\OpenGLEngine\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLEngine\Controller\FileListener.cpp">
+      <Filter>Source Files\OpenGLEngine\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLEngine\GLEKey.cpp">
+      <Filter>Source Files\OpenGLEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLEngine\Shader\GLEShaderProgram.cpp">
+      <Filter>Source Files\OpenGLEngine\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLEngine\Shader\GLEVertexShader.cpp">
+      <Filter>Source Files\OpenGLEngine\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLEngine\Controller\GLEMouse.cpp">
+      <Filter>Source Files\OpenGLEngine\Controller</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\AssetLoader.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\BasicAssetLoader.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\ConsoleProvider.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\CoutConsoleProvider.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\EngineCore.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Logger.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Vertex.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WinConsoleProvider.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXEngine\DirectXController.h">
+      <Filter>Source Files\DirectXEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXEngine\DirectXEngine.h">
+      <Filter>Source Files\DirectXEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXEngine\DirectXUtils.h">
+      <Filter>Source Files\DirectXEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXEngine\DxEventHandler.h">
+      <Filter>Source Files\DirectXEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXEngine\ShaderBuilder.h">
+      <Filter>Source Files\DirectXEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXEngine\WindowController.h">
+      <Filter>Source Files\DirectXEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLEngine\GLEModel.h">
+      <Filter>Source Files\OpenGLEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLEngine\GLEstdafx.h">
+      <Filter>Source Files\OpenGLEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLEngine\OpenGLEngine.h">
+      <Filter>Source Files\OpenGLEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLEngine\GLEController.h">
+      <Filter>Source Files\OpenGLEngine\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLEngine\Controller\FileListener.h">
+      <Filter>Source Files\OpenGLEngine\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLEngine\GLEKey.h">
+      <Filter>Source Files\OpenGLEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLEngine\Shader\GLEShaderProgram.h">
+      <Filter>Source Files\OpenGLEngine\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLEngine\Shader\GLEVertexShader.h">
+      <Filter>Source Files\OpenGLEngine\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLEngine\Controller\GLEMouse.h">
+      <Filter>Source Files\OpenGLEngine\Controller</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,3 +1,14 @@
+# External libraries
+ExternalLibraries/
+
+# Compile dirs
+Debug/
+Release/
+
+# visual studio cache and stuff
+.vs/GraphicsEngine/v15/ipch/AutoPCH/*
+.vs/
+
 # Prerequisites
 *.d
 
@@ -15,10 +26,6 @@
 *.so
 *.dylib
 *.dll
-
-# Fortran module files
-*.mod
-*.smod
 
 # Compiled Static libraries
 *.lai
