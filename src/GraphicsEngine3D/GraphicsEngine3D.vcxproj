@@ -173,6 +173,7 @@
     <ClCompile Include="OpenGLEngine\GLEController.cpp" />
     <ClCompile Include="OpenGLEngine\GLEKey.cpp" />
     <ClCompile Include="OpenGLEngine\GLEModel.cpp" />
+    <ClCompile Include="OpenGLEngine\Light.cpp" />
     <ClCompile Include="OpenGLEngine\OpenGLEngine.cpp" />
     <ClCompile Include="OpenGLEngine\Shader\GLEFragmentShader.cpp" />
     <ClCompile Include="OpenGLEngine\Shader\GLEShader.cpp" />
@@ -201,6 +202,7 @@
     <ClInclude Include="OpenGLEngine\GLEModel.h" />
     <ClInclude Include="OpenGLEngine\GLEstdafx.h" />
     <ClInclude Include="OpenGLEngine\GLEController.h" />
+    <ClInclude Include="OpenGLEngine\Light.h" />
     <ClInclude Include="OpenGLEngine\OpenGLEngine.h" />
     <ClInclude Include="OpenGLEngine\Shader\GLEFragmentShader.h" />
     <ClInclude Include="OpenGLEngine\Shader\GLEShader.h" />

@@ -91,6 +91,9 @@
     <ClCompile Include="OpenGLEngine\Controller\GLECamera.cpp">
       <Filter>Source Files\OpenGLEngine\Controller</Filter>
     </ClCompile>
+    <ClCompile Include="OpenGLEngine\Light.cpp">
+      <Filter>Source Files\OpenGLEngine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\AssetLoader.h">
@@ -173,6 +176,9 @@
     </ClInclude>
     <ClInclude Include="OpenGLEngine\Controller\GLECamera.h">
       <Filter>Source Files\OpenGLEngine\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLEngine\Light.h">
+      <Filter>Source Files\OpenGLEngine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -26,6 +26,7 @@ GLEModel::~GLEModel()
 void GLEModel::update(float rotate) {
 	_transformation._rotation.y += rotate;
 	_transformation._rotation.x += rotate;
+	_transformation._rotation.z += rotate;
 }
 
 void GLEModel::replaceShader(GLEShaderProgram * shader)
@@ -38,17 +39,36 @@ void GLEModel::replaceShader(GLEShaderProgram * shader)
 	_shaderProgram = shader;
 }
 
-void GLEModel::render(const glm::mat4 view) {
-	glm::mat4 mvp = glm::translate(view, _transformation.position);
-	mvp = glm::rotate(mvp, _transformation._rotation.y, glm::vec3(0, 1, 0));
-	mvp = glm::rotate(mvp, _transformation._rotation.x, glm::vec3(1, 0, 0));
+void GLEModel::render(const glm::mat4 &view, const glm::mat4 &projection) {
+	glm::mat4 model = glm::translate({}, _transformation.position);
+	model = glm::rotate(model, _transformation._rotation.x, glm::vec3(1, 0, 0));
+	model = glm::rotate(model, _transformation._rotation.y, glm::vec3(0, 1, 0));
+	model = glm::rotate(model, _transformation._rotation.z, glm::vec3(0, 0, 1));
 
 	// Pass parameters to the shader and use it
 	_shaderProgram->use();
-	_shaderProgram->setUniform(mvp);
+	_shaderProgram->setMat4("modelViewProjectionMatrix", view * (projection * model));
+	_shaderProgram->setMat4("view", view);
+	_shaderProgram->setMat4("projection", projection);
+	_shaderProgram->setMat4("model", model);
 
-	glVertexAttribPointer(0, 3, GL_FLOAT, false, sizeof(Vertex), _vertices.data());
-	glVertexAttribPointer(1, 4, GL_FLOAT, false, sizeof(Vertex), (float*)(_vertices.data()) + 3);
+	//for (int i = 0; i <= 12; i++) {
+	//	float * data = (float*)_vertices.data() + i; 
+	//	std::cout << i << ": " << *data << std::endl;
+	//}
+
+	// Positions
+	glVertexAttribPointer(0, 3, GL_FLOAT, false, sizeof(Vertex), (float*)_vertices.data());
+	glEnableVertexAttribArray(0);
+	// Colors
+	glVertexAttribPointer(1, 4, GL_FLOAT, false, sizeof(Vertex), (float*)_vertices.data() + 3);
+	glEnableVertexAttribArray(1);
+	// TexCoords
+	glVertexAttribPointer(2, 2, GL_FLOAT, false, sizeof(Vertex), (float*)_vertices.data() + 7);
+	glEnableVertexAttribArray(2);
+	// Normals
+	glVertexAttribPointer(3, 3, GL_FLOAT, false, sizeof(Vertex), (float*)_vertices.data() + 9);
+	glEnableVertexAttribArray(3);
 
 	glDrawArrays(GL_TRIANGLES, 0, _vertices.size());
 }

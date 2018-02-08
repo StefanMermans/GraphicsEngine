@@ -19,7 +19,12 @@ public:
 	bool init();
 	
 	void use();
-	void setUniform(glm::mat4 viewMatrix);
+
+	bool setVec3(const std::string &key, const glm::vec3 &value);
+	bool setVec4(const std::string &key, const glm::vec4 &value);
+	bool setMat3(const std::string &key, const glm::mat3 &value);
+	bool setMat4(const std::string &key, const glm::mat4 &value);
+	bool setFloat(const std::string &key, const GLfloat &value);
 
 	inline GLEShaderState state() const { return _state; };
 private:
@@ -27,8 +32,6 @@ private:
 	GLEFragmentShader _fragShader;
 
 	GLuint _programId;
-	GLuint _modelViewUniform;
-	GLuint _multiplier;
 
 	GLEShaderState _state;
 };

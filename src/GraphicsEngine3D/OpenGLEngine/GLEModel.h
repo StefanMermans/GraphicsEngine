@@ -17,7 +17,7 @@ public:
 	GLEModel(std::vector<Core::Vertex> vertices, GLEShaderProgram * shader);
 	~GLEModel();
 
-	void render(glm::mat4 view);
+	void render(const glm::mat4 &view, const glm::mat4 &projection);
 	void update(float rotate);
 	void replaceShader(GLEShaderProgram * shader);
 

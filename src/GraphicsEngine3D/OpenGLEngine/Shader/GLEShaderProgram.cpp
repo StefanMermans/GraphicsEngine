@@ -53,9 +53,6 @@ bool GLEShaderProgram::init() {
 	// Link the program
 	glLinkProgram(_programId);
 	
-	// get the uniform from the modelViewMatrix
-	_modelViewUniform = glGetUniformLocation(_programId, "modelViewProjectionMatrix");
-
 	return success;
 }
 
@@ -64,7 +61,42 @@ void GLEShaderProgram::use() {
 	glUseProgram(_programId);
 }
 
-void GLEShaderProgram::setUniform(glm::mat4 viewMatrix) {
-	glUniformMatrix4fv(_modelViewUniform, 1, 0, glm::value_ptr(viewMatrix));
+bool GLEShaderProgram::setVec3(const std::string & key, const glm::vec3 & value)
+{
+	GLuint location = glGetUniformLocation(_programId, key.c_str());
+	glUniform3fv(location, 1, glm::value_ptr(value));
+
+	return true;
 }
 
+bool GLEShaderProgram::setVec4(const std::string & key, const glm::vec4 & value)
+{
+	GLuint location = glGetUniformLocation(_programId, key.c_str());
+	glUniform4fv(location, 1, glm::value_ptr(value));
+
+	return true;
+}
+
+bool GLEShaderProgram::setMat3(const std::string & key, const glm::mat3 & value)
+{
+	GLuint location = glGetUniformLocation(_programId, key.c_str());
+	glUniformMatrix3fv(location, 1, 0, glm::value_ptr(value));
+
+	return true;
+}
+
+bool GLEShaderProgram::setMat4(const std::string & key, const glm::mat4 & value)
+{
+	GLuint location = glGetUniformLocation(_programId, key.c_str());
+	glUniformMatrix4fv(location, 1, 0, glm::value_ptr(value));
+
+	return true;
+}
+
+bool GLEShaderProgram::setFloat(const std::string & key, const GLfloat &value)
+{
+	GLuint location = glGetUniformLocation(_programId, key.c_str());
+	glUniform1f(location, value);
+
+	return true;
+}

@@ -3,7 +3,9 @@
 in vec4 color;
 out vec4 fragColor;
 
+// uniform vec4 ambientLight;
+
 void main()
 {
-	fragColor = vec4(0.7, 0.5, .8, 1);
+    fragColor = color;
 }
