@@ -61,21 +61,12 @@ public:
 	~GLEController() = default;
 
 	void init();
-	void update(float deltaTime);
-	void keyDown(unsigned char key, int x, int y);
-	void keyUp(unsigned char key, int x, int y);
+	void update(float deltaTime, Input * input);
 	void render(glm::mat4 view);
-	void mouseAction(
-		int x,
-		int y,
-		int button = GLE_MOUSE_BUTTON_NONE,
-		int state = GLE_MOUSE_BUTTON_NONE);
 	void reloadShaders();
 
 	std::vector<GLEModel*> models;
 private:
-	GLEKey _keys[GLE_KEY_COUNT];
-	GLEMouse _mouse;
 	GLECamera _camera;
 
 	const std::vector<Core::Vertex> _triangleVertices = {

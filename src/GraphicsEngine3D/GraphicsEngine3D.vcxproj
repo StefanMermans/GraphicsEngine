@@ -159,7 +159,11 @@
     <ClCompile Include="Core\BasicAssetLoader.cpp" />
     <ClCompile Include="Core\ConsoleProvider.cpp" />
     <ClCompile Include="Core\CoutConsoleProvider.cpp" />
+    <ClCompile Include="Core\ImageLoader.cpp" />
     <ClCompile Include="Core\Logger.cpp" />
+    <ClCompile Include="Core\Mesh\IndexedMesh.cpp" />
+    <ClCompile Include="Core\Mesh\Mesh.cpp" />
+    <ClCompile Include="Core\ObjLoader.cpp" />
     <ClCompile Include="Core\Vertex.cpp" />
     <ClCompile Include="Core\WinConsoleProvider.cpp" />
     <ClCompile Include="DirectXEngine\DirectXController.cpp" />
@@ -170,6 +174,7 @@
     <ClCompile Include="OpenGLEngine\Controller\GLECamera.cpp" />
     <ClCompile Include="OpenGLEngine\Controller\FileListener.cpp" />
     <ClCompile Include="OpenGLEngine\Controller\GLEMouse.cpp" />
+    <ClCompile Include="OpenGLEngine\Controller\InputListener.cpp" />
     <ClCompile Include="OpenGLEngine\GLEController.cpp" />
     <ClCompile Include="OpenGLEngine\GLEKey.cpp" />
     <ClCompile Include="OpenGLEngine\GLEModel.cpp" />
@@ -186,7 +191,12 @@
     <ClInclude Include="Core\ConsoleProvider.h" />
     <ClInclude Include="Core\CoutConsoleProvider.h" />
     <ClInclude Include="Core\EngineCore.h" />
+    <ClInclude Include="Core\ImageLoader.h" />
     <ClInclude Include="Core\Logger.h" />
+    <ClInclude Include="Core\Mesh\IndexedMesh.h" />
+    <ClInclude Include="Core\Mesh\Mesh.h" />
+    <ClInclude Include="Core\ObjLoader.h" />
+    <ClInclude Include="Core\stb_image.h" />
     <ClInclude Include="Core\Vertex.h" />
     <ClInclude Include="Core\WinConsoleProvider.h" />
     <ClInclude Include="DirectXEngine\DirectXController.h" />
@@ -198,6 +208,7 @@
     <ClInclude Include="OpenGLEngine\Controller\GLECamera.h" />
     <ClInclude Include="OpenGLEngine\Controller\FileListener.h" />
     <ClInclude Include="OpenGLEngine\Controller\GLEMouse.h" />
+    <ClInclude Include="OpenGLEngine\Controller\InputListener.h" />
     <ClInclude Include="OpenGLEngine\GLEKey.h" />
     <ClInclude Include="OpenGLEngine\GLEModel.h" />
     <ClInclude Include="OpenGLEngine\GLEstdafx.h" />
@@ -209,6 +220,9 @@
     <ClInclude Include="OpenGLEngine\Shader\GLEVertexShader.h" />
     <ClInclude Include="OpenGLEngine\Shader\GLEShaderProgram.h" />
     <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Techniques.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

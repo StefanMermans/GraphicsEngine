@@ -1,0 +1,13 @@
+Basic 4/4
+- Phong shading (Ambient/diffuse/specular)
+- Multitexturing
+- Toon lighting
+- Wave shader
+
+Post processing 1.5/4
+- Color warp
+- Crosshair
+
+
+Other 1/1
+- Outline

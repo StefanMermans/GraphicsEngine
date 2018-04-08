@@ -9,6 +9,7 @@ GLEMouse::GLEMouse(const size_t &buttonCount) :
 
 void GLEMouse::setPos(const glm::ivec2 &pos)
 {
+#ifdef RELATIVE_MOUSE
 	// In the initial state the mouse delta will be invalid
 	if (_initial) {
 		_initial = false;
@@ -16,10 +17,26 @@ void GLEMouse::setPos(const glm::ivec2 &pos)
 	}
 	else {
 		// Calculate mouse movement
-		_delta = _lastPos - pos;
+		_delta.x = _lastPos.x - pos.x;
+		_delta.y = pos.y - _lastPos.y;
+		//_delta = _lastPos - pos;
 		// Set _lastPos to the newest value
 		_lastPos = pos;
 	}
+#else
+	if (_initial) {
+		_initial = false;
+		_delta = glm::vec2();
+	}
+	else {
+		glm::ivec2 center(1280/2, 720/2);
+
+		_delta.y = pos.y - center.y;
+		_delta.x = center.x - pos.x;
+	}
+#endif // RELATIVE_MOUSE
+
+	
 }
 
 bool GLEMouse::isHeld(const size_t &index)

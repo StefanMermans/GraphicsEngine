@@ -15,5 +15,5 @@ void main()
 	color = a_color;
 
     // gl_Position = (model * view * projection) * vec4(a_position, 1.0);
-    gl_Position = modelViewProjectionMatrix * vec4(a_position, 1.0);
+    gl_Position = (view * (projection * model)) * vec4(a_position, 1.0);
 }

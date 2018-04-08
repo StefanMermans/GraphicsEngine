@@ -21,6 +21,7 @@ public:
 	GLEShaderState getState() const;
 	virtual bool attach(const GLuint &programId);
 	static bool checkErrors(const GLuint &shaderId);
+	bool reload();
 protected:
 	bool compile(const char * shaderData);
 

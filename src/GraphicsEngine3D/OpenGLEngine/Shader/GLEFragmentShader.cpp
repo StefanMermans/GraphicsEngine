@@ -4,8 +4,8 @@
 
 using Core::Logger;
 
-GLEFragmentShader::GLEFragmentShader(const std::string &filePath)
-	: GLEShader(filePath, GL_FRAGMENT_SHADER)
+GLEFragmentShader::GLEFragmentShader(const std::string &filePath) :
+	GLEShader(filePath, GL_FRAGMENT_SHADER)
 {
 }
 

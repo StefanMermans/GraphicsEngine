@@ -18,6 +18,15 @@ GLEShaderProgram::GLEShaderProgram(const std::string &vsFilePath, const std::str
 	_state = GLE_SHADER_CREATED;
 }
 
+GLEShaderProgram::GLEShaderProgram(const std::string & generalPath)  :
+	_vertShader(generalPath + ".vs"),
+	_fragShader(generalPath + ".fs")
+{
+	// Initialise the shader program
+	_programId = glCreateProgram();
+	_state = GLE_SHADER_CREATED;
+}
+
 GLEShaderProgram::GLEShaderProgram()
 {
 	_programId = glCreateProgram();
@@ -50,14 +59,26 @@ bool GLEShaderProgram::init() {
 	_state = GLE_SHADER_COMPILED;
 	_fragShader.attach(_programId);
 
+	glBindAttribLocation(_programId, 0, "a_position");		// zet de positie op vertex attribuut 0
+	glBindAttribLocation(_programId, 1, "a_color");			// zet de kleur op vertex attribuut 1
+	glBindAttribLocation(_programId, 2, "a_texcoord");		// zet de texcoord op vertex attribuut 2
+	glBindAttribLocation(_programId, 3, "a_normal");		// zet de texcoord op vertex attribuut 2
+
 	// Link the program
 	glLinkProgram(_programId);
-	
+
 	return success;
 }
 
+bool GLEShaderProgram::reload()
+{
+	if (_vertShader.reload() && _fragShader.reload()) {
+		return init();
+	}
+	return false;
+}
+
 void GLEShaderProgram::use() {
-	// Zet dit als actieve programma
 	glUseProgram(_programId);
 }
 
@@ -97,6 +118,14 @@ bool GLEShaderProgram::setFloat(const std::string & key, const GLfloat &value)
 {
 	GLuint location = glGetUniformLocation(_programId, key.c_str());
 	glUniform1f(location, value);
+
+	return true;
+}
+
+bool GLEShaderProgram::setInt(const std::string & key, const GLint & value)
+{
+	GLuint location = glGetUniformLocation(_programId, key.c_str());
+	glUniform1i(location, value);
 
 	return true;
 }

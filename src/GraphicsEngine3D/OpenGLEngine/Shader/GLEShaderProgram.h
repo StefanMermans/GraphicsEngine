@@ -13,11 +13,13 @@ public:
 	GLEShaderProgram(
 		const std::string &vsFilePath,
 		const std::string &fsFilePath);
+	GLEShaderProgram(const std::string &generalPath);
 	GLEShaderProgram();
 	~GLEShaderProgram();
 
 	bool init();
-	
+	bool reload();
+
 	void use();
 
 	bool setVec3(const std::string &key, const glm::vec3 &value);
@@ -25,6 +27,7 @@ public:
 	bool setMat3(const std::string &key, const glm::mat3 &value);
 	bool setMat4(const std::string &key, const glm::mat4 &value);
 	bool setFloat(const std::string &key, const GLfloat &value);
+	bool setInt(const std::string &key, const GLint &value);
 
 	inline GLEShaderState state() const { return _state; };
 private:

@@ -72,3 +72,12 @@ bool GLEShader::checkErrors(const GLuint & shaderId)
 	return true;
 }
 
+bool GLEShader::reload()
+{
+	if (_state == GLE_SHADER_CREATED_NO_FILES) {
+		return false;
+	}
+
+	return init();
+}
+

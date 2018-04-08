@@ -20,6 +20,9 @@
     <Filter Include="Source Files\OpenGLEngine\Shader">
       <UniqueIdentifier>{18288184-57d9-4450-b80d-b0a6170a30ec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Core\Mesh">
+      <UniqueIdentifier>{03f88e15-b884-4c07-ae90-37f4835a4690}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GraphicsEngine3D.cpp">
@@ -93,6 +96,21 @@
     </ClCompile>
     <ClCompile Include="OpenGLEngine\Light.cpp">
       <Filter>Source Files\OpenGLEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\ObjLoader.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Mesh\IndexedMesh.cpp">
+      <Filter>Source Files\Core\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Mesh\Mesh.cpp">
+      <Filter>Source Files\Core\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLEngine\Controller\InputListener.cpp">
+      <Filter>Source Files\OpenGLEngine\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\ImageLoader.cpp">
+      <Filter>Source Files\Core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -180,5 +198,28 @@
     <ClInclude Include="OpenGLEngine\Light.h">
       <Filter>Source Files\OpenGLEngine</Filter>
     </ClInclude>
+    <ClInclude Include="Core\ObjLoader.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Mesh\IndexedMesh.h">
+      <Filter>Source Files\Core\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Mesh\Mesh.h">
+      <Filter>Source Files\Core\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLEngine\Controller\InputListener.h">
+      <Filter>Source Files\OpenGLEngine\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\stb_image.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\ImageLoader.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Techniques.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

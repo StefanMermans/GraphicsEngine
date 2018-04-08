@@ -39,7 +39,7 @@ bool GLEKey::isPressed() {
 	return false;
 }
 
-bool GLEKey::isHeld() {
+bool GLEKey::isHeld() const {
 	return _held;
 }
 

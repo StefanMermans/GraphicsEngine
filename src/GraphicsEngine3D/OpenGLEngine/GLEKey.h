@@ -12,7 +12,7 @@ public:
 	void up();
 
 	bool isPressed();
-	bool isHeld();
+	bool isHeld() const;
 	
 	unsigned char getId() const;
 	void setId(const unsigned char &id);

@@ -12,6 +12,5 @@
 #include <DirectXMath.h>
 #include <string>
 
-
 #endif // !STDAFX_H
 

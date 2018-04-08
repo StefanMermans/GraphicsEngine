@@ -4,6 +4,7 @@
 #include "GLEModel.h"
 #include <vector>
 #include "GLEController.h"
+#include "Controller\InputListener.h"
 
 class OpenGLEngine {
 public:
@@ -22,6 +23,7 @@ public:
 	void activeMouse(int x, int y);
 	void update();
 private:
+	Input * _inputListener;
 	glm::ivec2 _screenSize;
 	std::vector<GLEModel> _models;
 	float _rotation;
